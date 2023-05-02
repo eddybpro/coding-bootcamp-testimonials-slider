@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root{
+    --Dark-Blue: hsl(240, 38%, 20%);
+    --Grayish-Blue: hsl(240, 18%, 77%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-in-out;
+}
+
+.img-container{
+    width: 100%;
+    height: 30rem;
+    padding: 4rem 0;
+    margin: auto;
+    background: url('./images/pattern-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top 1.5rem left 1rem;
+    background-size: 90% 90%;
+    position: relative;
+}
+
+.hero{
+    display: block;
+    width: 70%;
+    height: 101%;
+    border-radius: .5rem;
+    margin: auto;
+}
+
+.btns{
+    position: absolute;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    margin: auto;
+    background-color: white;
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: 0 8px 40px -8px var(--Dark-Blue);
+}
+
+.prev, .next{
+    padding: 1rem 1.7rem;
+    cursor: pointer;
+}
+
+.txt-container{
+    height: 30rem;
+    margin: 2rem 0;
+    color: var(--Dark-Blue);
+    background: url('./images/pattern-quotes.svg'), url('./images/pattern-curve.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-size: 10rem 6rem, 100% 30%;
+    background-position: top, bottom center;
+}
+
+.para{
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 2rem;
+    padding: 3.5rem 0 2rem;
+}
+
+.name{
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.role{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--Grayish-Blue);
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+footer{
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--Grayish-Blue);
+    margin-bottom: 1rem;
+}
+
+footer a{
+    color: var(--Dark-Blue);
+    text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+    body{
+        background:url('./images/pattern-curve.svg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100% 25%;
+    }
+
+    .wrapper{
+        max-width: 100rem;
+        margin: auto;
+    }
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-container{
+        height: 40rem;
+        background-position: top 1rem left 1rem;
+        background-size: 90% 100%;
+    }
+
+    .hero{
+        width: 75%;
+        height: 101%;
+        transform: translateX(-2rem);
+    }
+
+    .btns{
+        left: 25%;
+        transform: translateX(-25%);
+    }
+
+    .txt-container{
+        padding-top: 4rem;
+        transform: translateX(30%);
+        background: url('./images/pattern-quotes.svg');
+        background-position: top left;
+        background-size: 10rem 8rem;
+        background-repeat: no-repeat;
+    }
+
+    .para{
+        font-size: 2rem;
+        text-align: left;
+        line-height: 2.5rem;
+    }
+
+    .name, .role{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .card > div{
+        flex: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
